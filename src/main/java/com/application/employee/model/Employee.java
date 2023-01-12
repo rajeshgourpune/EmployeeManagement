@@ -10,7 +10,7 @@ import javax.persistence.*;
 @EntityListeners(AuditingEntityListener.class)
 public class Employee implements java.io.Serializable {
 
-    private static final long serialVersionUID = 123456789L;
+    private static final long serialVersionUID = 1234567L;
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         private Integer id;
