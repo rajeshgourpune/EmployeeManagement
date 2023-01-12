@@ -22,7 +22,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee save(Employee employee) {
         Employee employee1 = new Employee();
-        employee1 = employeenDAO.save(employee );
+        employee1 = employeeDAO.save(employee );
         return employee1;
     }
 

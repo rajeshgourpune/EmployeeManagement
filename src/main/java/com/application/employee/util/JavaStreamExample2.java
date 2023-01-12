@@ -12,10 +12,10 @@ public class JavaStreamExample2 {
         productsList.add(new ProductDTO(3,"Lenevo Laptop",28000f));
         productsList.add(new ProductDTO(4,"Sony Laptop",28000f));
         productsList.add(new ProductDTO(5,"Apple Laptop",90000f));
-        productsList.stream()
+       /* productsList.stream()
                 .filter(p ->p.price> 28000)   // filtering price
                 .map(pm ->pm.name)          // fetching price
-                .forEach(System.out::println);  // iterating price
+                .forEach(System.out::println);  // iterating price*/
     }
 }
 class ProductDTO {

@@ -34,7 +34,7 @@ public class EmployeeController {
     public Employee saveEmployee(@RequestBody Employee employeeDTO)
     {
         List<EmployeeDTO> listOfEmployee = new ArrayList<EmployeeDTO>();
-        return employeeService.save(employeenDTO);
+        return employeeService.save(employeeDTO);
     }
 
     @RequestMapping(value = "/employees/update", method = RequestMethod.POST,headers="Accept=application/json")

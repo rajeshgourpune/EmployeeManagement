@@ -1,6 +1,6 @@
 package com.application.employee.service;
 
-import com.application.employee.model.EmployeenDTO;
+import com.application.employee.model.EmployeeDTO;
 import com.application.employee.model.Employee;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;

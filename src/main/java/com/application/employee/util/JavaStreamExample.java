@@ -2,7 +2,6 @@ package com.application.employee.util;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class JavaStreamExample {
     public static void main(String[] args) {
@@ -14,11 +13,11 @@ public class JavaStreamExample {
         productsList.add(new Product(4,"Sony Laptop",28000f));
         productsList.add(new Product(5,"Apple Laptop",90000f));
         System.out.println("ProductList :::>>>"+productsList);
-        List<String> pricesList =  productsList.stream()
-                .filter(procutPrice ->procutPrice.price> 2000)   // filtering price
-                .map(pm ->pm.name)          // fetching price
-                .collect(Collectors.toList());
-        System.out.println("PricesList :::>>>"+pricesList);
+//        List<String> pricesList =  productsList.stream()
+//                .filter(procutPrice ->procutPrice.price> 2000)   // filtering price
+//                .map(pm ->pm.name)          // fetching price
+//                .collect(Collectors.toList());
+        //System.out.println("PricesList :::>>>"+pricesList);
     }
 
 }
