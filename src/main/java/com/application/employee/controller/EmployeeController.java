@@ -20,6 +20,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.GET)
     @GetMapping
     public Iterable<Employee> findAll() {
 
