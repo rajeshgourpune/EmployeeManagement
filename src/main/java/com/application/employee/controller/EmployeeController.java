@@ -44,6 +44,7 @@ public class EmployeeController {
         employeeService.update(employeeDTO);
     }
 
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.GET)
     @RequestMapping(value = "/employees", method = RequestMethod.GET,headers="Accept=application/json")
     public List<Employee> getEmployeeList()
     {
