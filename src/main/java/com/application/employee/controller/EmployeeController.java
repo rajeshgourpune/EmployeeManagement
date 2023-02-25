@@ -22,12 +22,14 @@ public class EmployeeController {
 
     @GetMapping
     public Iterable<Employee> findAll() {
+
         return employeeRepository.findAll();
     }
 
     @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.POST)
     @PostMapping(consumes = "application/json")
     public Employee create(@RequestBody Employee employee) {
+
         return employeeRepository.save(employee);
     }
 
