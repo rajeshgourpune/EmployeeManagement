@@ -25,18 +25,20 @@ public class EmployeeController {
         return employeeRepository.findAll();
     }
 
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.POST)
     @PostMapping(consumes = "application/json")
     public Employee create(@RequestBody Employee employee) {
         return employeeRepository.save(employee);
     }
 
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.POST)
     @RequestMapping(value = "/employees/save", method = RequestMethod.POST,headers="Accept=application/json")
     public Employee saveEmployee(@RequestBody Employee employeeDTO)
     {
         List<EmployeeDTO> listOfEmployee = new ArrayList<EmployeeDTO>();
         return employeeService.save(employeeDTO);
     }
-
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.POST)
     @RequestMapping(value = "/employees/update", method = RequestMethod.POST,headers="Accept=application/json")
     public  void updateEmployee(@RequestBody Employee employeeDTO)
     {
