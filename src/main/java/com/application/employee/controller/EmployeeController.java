@@ -41,8 +41,8 @@ public class EmployeeController {
         List<EmployeeDTO> listOfEmployee = new ArrayList<EmployeeDTO>();
         return employeeService.save(employeeDTO);
     }
-    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.POST)
-    @RequestMapping(value = "/employees/update", method = RequestMethod.POST,headers="Accept=application/json")
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.PUT)
+    @RequestMapping(value = "/employees/update", method = RequestMethod.PUT,headers="Accept=application/json")
     public  void updateEmployee(@RequestBody Employee employeeDTO)
     {
         List<EmployeeDTO> listOfEmployee = new ArrayList<EmployeeDTO>();
