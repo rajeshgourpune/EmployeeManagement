@@ -41,9 +41,8 @@ public class EmployeeDAOImpl extends CustomHibernateDaoSupport implements Employ
 
     @Override
     public Employee findById(Integer id){
-        List list = getHibernateTemplate().find(
-                "from employee where Id=?",id
-        );
-        return (Employee)list.get(0);
+        Employee employee = new Employee();
+        employee = employeeRepository.findById(id);
+        return employee;
     }
 }

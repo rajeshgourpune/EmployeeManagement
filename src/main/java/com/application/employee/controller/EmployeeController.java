@@ -58,4 +58,13 @@ public class EmployeeController {
         return listOfEmployee;
     }
 
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.GET)
+    @RequestMapping(value = "/employees/{id}", method = RequestMethod.GET,headers="Accept=application/json")
+    public Employee getEmployeeDetails(@PathVariable int id)
+    {
+        Employee employeedetails = new Employee();
+        employeedetails = employeeService.findById(id);
+        return employeedetails;
+    }
+
 }

@@ -1,7 +1,6 @@
 package com.application.employee.model;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
@@ -35,6 +34,9 @@ public class Employee implements java.io.Serializable {
         }
 
 
+        public int getId() {
+        return this.id;
+    }
 
         public String getName() {
             return this.name;

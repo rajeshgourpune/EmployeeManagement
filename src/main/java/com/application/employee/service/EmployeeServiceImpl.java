@@ -1,11 +1,9 @@
 package com.application.employee.service;
 
 import com.application.employee.dao.EmployeeDAO;
-import com.application.employee.model.EmployeeDTO;
 import com.application.employee.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
@@ -51,4 +49,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeList = employeeDAO.findAll();
         return employeeList;
     }
+
+
+
 }
