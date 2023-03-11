@@ -1,4 +1,4 @@
-package factoryMethodPattern;
+package CreationalPattern.factoryMethodPattern;
 
 class  DomesticPlan extends Plan{
     //@override

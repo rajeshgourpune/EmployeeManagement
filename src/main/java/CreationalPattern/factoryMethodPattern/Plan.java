@@ -1,4 +1,4 @@
-package factoryMethodPattern;
+package CreationalPattern.factoryMethodPattern;
 
 abstract class Plan{
     protected double rate;

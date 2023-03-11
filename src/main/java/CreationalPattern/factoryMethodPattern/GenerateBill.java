@@ -1,4 +1,4 @@
-package factoryMethodPattern;
+package CreationalPattern.factoryMethodPattern;
 
 import java.io.BufferedReader;
 import java.io.IOException;

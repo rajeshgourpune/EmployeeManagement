@@ -1,4 +1,4 @@
-package factoryMethodPattern;
+package CreationalPattern.factoryMethodPattern;
 
 public class InstitutionalPlan extends Plan {
     //@override
