@@ -34,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
 
     public void delete(Employee employee) {
-
+        // Del API
         employeeDAO.delete(employee);
     }
 

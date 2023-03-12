@@ -71,6 +71,7 @@ public class EmployeeController {
     @RequestMapping(value = "/employees/delete/{id}", method = RequestMethod.DELETE,headers="Accept=application/json")
     public  void deleteEmployee(@PathVariable int id)
     {
+        //delete API
         Employee employeedetails = new Employee();
         employeedetails = employeeService.findById(id);
         employeeService.delete(employeedetails);

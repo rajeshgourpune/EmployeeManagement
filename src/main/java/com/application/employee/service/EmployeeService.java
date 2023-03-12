@@ -12,6 +12,7 @@ public interface EmployeeService {
 
     Employee update(Employee employee);
 
+    // Del API
     void delete(Employee employee);
 
     Employee findById(Integer id);
