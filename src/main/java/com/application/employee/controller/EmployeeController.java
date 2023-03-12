@@ -30,7 +30,8 @@ public class EmployeeController {
     @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.POST)
     @PostMapping(consumes = "application/json")
     public Employee create(@RequestBody Employee employee) {
-
+        List<Employee> listOfEmployee = new ArrayList<Employee>();
+        listOfEmployee = employeeService.getEmployeeList();
         return employeeRepository.save(employee);
     }
 
@@ -38,7 +39,11 @@ public class EmployeeController {
     @RequestMapping(value = "/employees/save", method = RequestMethod.POST,headers="Accept=application/json")
     public Employee saveEmployee(@RequestBody Employee employeeDTO)
     {
-        List<EmployeeDTO> listOfEmployee = new ArrayList<EmployeeDTO>();
+        List<Employee> listOfEmployee = new ArrayList<Employee>();
+        listOfEmployee = employeeService.getEmployeeList();
+        Employee employee2 = listOfEmployee.stream().reduce((a, b) -> a.getId() > b.getId() ? a : b).get();
+        int maxId = employee2.getId();
+        employeeDTO.setId(maxId+1);
         return employeeService.save(employeeDTO);
     }
     @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.PUT)
