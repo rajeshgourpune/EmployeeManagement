@@ -12,7 +12,7 @@ public interface EmployeeDAO {
 
     Employee update(Employee employee);
 
-    void delete(Integer id);
+    void delete(Employee employee);
 
     Employee findById(Integer id);
 

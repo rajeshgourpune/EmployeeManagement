@@ -67,4 +67,13 @@ public class EmployeeController {
         return employeedetails;
     }
 
+    @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.DELETE)
+    @RequestMapping(value = "/employees/delete/{id}", method = RequestMethod.DELETE,headers="Accept=application/json")
+    public  void deleteEmployee(@PathVariable int id)
+    {
+        Employee employeedetails = new Employee();
+        employeedetails = employeeService.findById(id);
+        employeeService.delete(employeedetails);
+    }
+
 }

@@ -35,8 +35,11 @@ public class EmployeeDAOImpl extends CustomHibernateDaoSupport implements Employ
     }
 
     @Override
-    public void delete(Integer id){
-        getHibernateTemplate().delete(id);
+    @Transactional
+    public void delete(Employee employee){
+        //getHibernateTemplate().delete(id);
+        employeeRepository.delete(employee);
+
     }
 
     @Override
