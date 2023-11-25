@@ -43,7 +43,7 @@ public class EmployeeController {
         listOfEmployee = employeeService.getEmployeeList();
         Employee employee2 = listOfEmployee.stream().reduce((a, b) -> a.getId() > b.getId() ? a : b).get();
         int maxId = employee2.getId();
-        employeeDTO.setId(maxId+1);
+        employeeDTO.setId(maxId+1);//save call
         return employeeService.save(employeeDTO);
     }
     @CrossOrigin( origins = "http://localhost:3000",methods = RequestMethod.PUT)
