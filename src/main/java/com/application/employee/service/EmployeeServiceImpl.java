@@ -2,6 +2,8 @@ package com.application.employee.service;
 
 import com.application.employee.dao.EmployeeDAO;
 import com.application.employee.model.Employee;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +14,8 @@ import java.util.List;
 @Component
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
+
+    private static final Logger logger = LogManager.getLogger(EmployeeServiceImpl.class);
 
     @Autowired
     EmployeeDAO employeeDAO;
