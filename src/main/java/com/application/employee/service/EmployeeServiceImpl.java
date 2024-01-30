@@ -20,10 +20,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     EmployeeDAO employeeDAO;
 
-
     @Override
     public Employee save(Employee employee) {
-        logger.debug("EmployeeServiceImpl::::save::>>");
+        logger.debug("EmployeeServiceImpl::::save:User:>>");
         Employee employee1 = new Employee();
         employee1 = employeeDAO.save(employee );
         return employee1;
@@ -31,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee update(Employee employee) {
-        logger.debug("EmployeeServiceImpl::::update::>>");
+        logger.debug("EmployeeServiceImpl::::update:User:>>");
         Employee employee1 = new Employee();
         employee1 = employeeDAO.update(employee );
         return employee1;
@@ -46,7 +45,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findById(Integer id) {
-        logger.debug("EmployeeServiceImpl::::findById::>>");
+        logger.debug("EmployeeServiceImpl::Get user::findById::>>");
         Employee employee= employeeDAO.findById(id);
         return employee;
     }

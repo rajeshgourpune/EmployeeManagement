@@ -36,7 +36,7 @@ public class EmployeeController {
     public Employee create(@RequestBody Employee employee) {
         List<Employee> listOfEmployee = new ArrayList<Employee>();
         listOfEmployee = employeeService.getEmployeeList();
-        logger.info("EmployeeController::::create::>>");
+        logger.info("EmployeeController::Registration::create::>>");
         return employeeRepository.save(employee);
     }
 
@@ -44,7 +44,7 @@ public class EmployeeController {
     @RequestMapping(value = "/employees/save", method = RequestMethod.POST,headers="Accept=application/json")
     public Employee saveEmployee(@RequestBody Employee employeeDTO)
     {
-        logger.info("EmployeeController::::saveEmployee::>>");
+        logger.info("EmployeeController::Save::saveEmployee::>>");
         List<Employee> listOfEmployee = new ArrayList<Employee>();
         listOfEmployee = employeeService.getEmployeeList();
         Employee employee2 = listOfEmployee.stream().reduce((a, b) -> a.getId() > b.getId() ? a : b).get();
@@ -56,7 +56,7 @@ public class EmployeeController {
     @RequestMapping(value = "/employees/update", method = RequestMethod.PUT,headers="Accept=application/json")
     public  void updateEmployee(@RequestBody Employee employeeDTO)
     {
-        logger.info("EmployeeController::::updateEmployee::>>");
+        logger.info("EmployeeController::update::updateEmployee::>>");
         List<EmployeeDTO> listOfEmployee = new ArrayList<EmployeeDTO>();
         employeeService.update(employeeDTO);
     }
@@ -65,7 +65,7 @@ public class EmployeeController {
     @RequestMapping(value = "/employees", method = RequestMethod.GET,headers="Accept=application/json")
     public List<Employee> getEmployeeList()
     {
-        logger.info("EmployeeController::::getEmployeeList::>>");
+        logger.info("EmployeeController::List::getEmployeeList::>>");
         List<Employee> listOfEmployee = new ArrayList<Employee>();
         listOfEmployee = employeeService.getEmployeeList();
         return listOfEmployee;
@@ -75,7 +75,7 @@ public class EmployeeController {
     @RequestMapping(value = "/employees/{id}", method = RequestMethod.GET,headers="Accept=application/json")
     public Employee getEmployeeDetails(@PathVariable int id)
     {
-        logger.info("EmployeeController::::getEmployeeDetails::>>");
+        logger.info("EmployeeController::Details::getEmployeeDetails::>>");
         Employee employeedetails = new Employee();
         employeedetails = employeeService.findById(id);
         return employeedetails;
@@ -86,7 +86,7 @@ public class EmployeeController {
     public  void deleteEmployee(@PathVariable int id)
     {
         //delete API
-        logger.info("EmployeeController::::deleteEmployee::>>");
+        logger.info("EmployeeController::Delete::deleteEmployee::>>");
         Employee employeedetails = new Employee();
         employeedetails = employeeService.findById(id);
         employeeService.delete(employeedetails);
